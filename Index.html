@@ -1,0 +1,865 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Terpana - Telur Herbal Premium</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+        <style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .bg-sage-mesh {
+            background-color: #f3f7f4;
+            background-image: 
+                radial-gradient(at 0% 0%, rgba(204, 233, 212, 0.8) 0, transparent 50%), 
+                radial-gradient(at 100% 100%, rgba(254, 243, 199, 0.7) 0, transparent 50%),
+                radial-gradient(at 50% 50%, rgba(240, 253, 244, 0.5) 0, transparent 80%);
+        }
+        .image-glow {
+            box-shadow: 0 25px 50px -12px rgba(4, 120, 87, 0.15);
+        }
+        /* Menghilangkan panah bawaan browser pada tag details */
+        details summary::-webkit-details-marker { display: none; }
+        details summary { list-style: none; }
+    </style>
+    </head>
+    <body class="bg-slate-50 text-slate-800 antialiased bg-sage-mesh">
+
+        <div class="fixed top-4 left-0 right-0 z-50 px-4 md:px-6">
+            <nav class="max-w-7xl mx-auto bg-white/85 backdrop-blur-xl rounded-[24px] border border-emerald-500/10 shadow-[0_10px_30px_-5px_rgba(4,120,87,0.1)] transition-all duration-300">
+                <div class="px-6 h-20 flex items-center justify-between">
+                    <a href="#" class="text-2xl font-black text-emerald-900 tracking-wider flex items-center gap-2">
+                        <i class="fa-solid fa-egg text-amber-500 animate-bounce"></i>
+                        <span>TERPANA<span class="text-amber-500">.</span></span>
+                    </a>
+
+                    <div class="hidden md:flex items-center space-x-6 font-semibold text-slate-600">
+                        <a href="#home" class="hover:text-emerald-700 transition-colors relative">Beranda</a>
+                        <a href="#tentang" class="hover:text-emerald-700 transition-colors relative">Tentang Kami</a>
+                        <a href="#produk" class="hover:text-emerald-700 transition-colors relative">Produk</a>
+                        <a href="#proses" class="hover:text-emerald-700 transition-colors relative">Proses</a>
+                        <a href="#keunggulan" class="hover:text-emerald-700 transition-colors relative">Keunggulan</a>
+                        <a href="#dampak" class="hover:text-emerald-700 transition-colors relative">Dampak & Misi</a>
+                        <a href="#testimoni" class="hover:text-emerald-700 transition-colors relative">Testimoni</a>
+                        <a href="#faq" class="hover:text-emerald-700 transition-colors relative">FAQ</a>
+                        <a href="#kontak" class="bg-gradient-to-r from-emerald-700 to-emerald-800 hover:from-emerald-800 hover:to-emerald-900 text-white px-6 py-2.5 rounded-full shadow-lg shadow-emerald-200 transition-all transform hover:-translate-y-0.5 font-bold">
+                            Kontak
+                        </a>
+                    </div>
+
+                    <button id="menu-btn" class="block md:hidden text-emerald-800 bg-emerald-50 hover:bg-emerald-100 w-11 h-11 flex items-center justify-center rounded-xl border border-emerald-200/60 shadow-sm shadow-emerald-100 transition-all duration-300 active:scale-90 focus:outline-none z-50">
+                        <i id="menu-icon" class="fa-solid fa-bars text-xl transition-transform duration-300"></i>
+                    </button>
+                </div>
+
+                <div id="mobile-menu" class="hidden md:hidden px-6 pb-8 pt-2 flex flex-col space-y-4 font-bold text-slate-800 border-t border-emerald-100/50">
+                    <a href="#home" class="mobile-link py-2 hover:text-emerald-700 transition-colors border-b border-slate-100 block text-lg">Beranda</a>
+                    <a href="#tentang" class="mobile-link py-2 hover:text-emerald-700 transition-colors border-b border-slate-100 block text-lg">Tentang Kami</a>
+                    <a href="#produk" class="mobile-link py-2 hover:text-emerald-700 transition-colors border-b border-slate-100 block text-lg">Produk</a>
+                    <a href="#proses" class="mobile-link py-2 hover:text-emerald-700 transition-colors border-b border-slate-100 block text-lg">Proses</a>
+                    <a href="#keunggulan" class="mobile-link py-2 hover:text-emerald-700 transition-colors border-b border-slate-100 block text-lg">Keunggulan</a>
+                    <a href="#dampak" class="mobile-link py-2 hover:text-emerald-700 transition-colors border-b border-slate-100 block text-lg">Dampak & Misi</a>
+                    <a href="#testimoni" class="mobile-link py-2 hover:text-emerald-700 transition-colors border-b border-slate-100 block text-lg">Testimoni</a>
+                    <a href="#faq" class="mobile-link py-2 hover:text-emerald-700 transition-colors border-b border-slate-100 block text-lg">FAQ</a>
+                    <a href="#kontak" class="mobile-link text-center bg-gradient-to-r from-emerald-700 to-emerald-800 text-white py-3.5 rounded-xl shadow-md shadow-emerald-100 block text-lg mt-4">Kontak</a>
+                </div>
+            </nav>
+        </div>
+        <section id="home" class="pt-36 md:pt-48 pb-24 px-6 overflow-hidden">
+            <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <div class="space-y-6 text-center md:text-left order-2 md:order-1 relative z-10">
+                    <span class="inline-flex items-center gap-2 bg-emerald-100 text-emerald-950 text-xs font-extrabold px-4 py-2 rounded-full uppercase tracking-wider shadow-sm">
+                        <i class="fa-solid fa-leaf text-emerald-600 animate-pulse"></i> 100% Organik & Peternakan Higienis
+                    </span>
+                    <h1 class="text-4xl md:text-6xl font-black text-slate-900 leading-tight tracking-tight">
+                        Telur Herbal <br>
+                        <span class="bg-gradient-to-r from-emerald-700 via-teal-600 to-amber-600 bg-clip-text text-transparent">Bebas Antibiotik</span> <br class="hidden md:block">
+                        Untuk Keluarga Indonesia
+                    </h1>
+                    <p class="text-base md:text-lg text-slate-600 max-w-lg mx-auto md:mx-0 leading-relaxed">
+                        Dihasilkan dari ayam petelur yang diberi pakan alami kunyit, jahe, temulawak, dan spirulina tanpa residu antibiotik sintetis. Segar langsung dari kandang ke meja makan Anda.
+                    </p>
+                </div>
+
+                <div class="relative flex justify-center order-1 md:order-2">
+                    <div class="absolute w-72 h-72 md:w-[450px] md:h-[450px] bg-emerald-200/50 rounded-full blur-3xl -z-10 animate-pulse top-10"></div>
+                    <div class="relative w-full max-w-[400px]">
+                        <div class="rounded-[2.5rem] overflow-hidden shadow-2xl border-4 border-white transform md:rotate-3 hover:rotate-0 transition-transform duration-500 group image-glow">
+                            <img src="LOGO TERPANA.png" alt="Logo Terpana" class="w-full" onerror="this.src='https://images.unsplash.com/photo-1516448620398-c5f44bf9f441?auto=format&fit=crop&q=80&w=600'">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="tentang" class="py-24 px-6 bg-white overflow-hidden relative">
+            <div class="max-w-7xl mx-auto">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                    <div class="lg:col-span-7 space-y-6 relative z-10">
+                        <div class="space-y-2">
+                            <span class="inline-flex items-center gap-2 bg-emerald-50 text-emerald-800 text-xs font-bold px-3 py-1.5 rounded-full uppercase tracking-wider border border-emerald-100 shadow-sm">
+                                <i class="fa-solid fa-seedling"></i> Latar Belakang Kami
+                            </span>
+                            <h2 class="text-3xl md:text-5xl font-black text-slate-900 leading-tight tracking-tight">
+                                Mengapa<br>
+                                <span class="bg-gradient-to-r from-emerald-700 via-teal-600 to-amber-600 bg-clip-text text-transparent">TERPANA Lahir ?</span>
+                            </h2>
+                        </div>
+
+                        <div class="space-y-4 text-slate-600 leading-relaxed text-sm md:text-base">
+                            <p>
+                                Di Kabupaten Magelang, rata-rata konsumsi protein masyarakat masih berada di angka <strong>52,10 gram per kapita per hari</strong>, di bawah standar nasional yaitu <strong>57 gram</strong>. Selain itu, maraknya residu antibiotik sintetis pada telur komersial menjadi ancaman kesehatan jangka panjang.
+                            </p>
+
+                            <div class="border-l-4 border-amber-500 pl-4 bg-amber-50/60 py-3 pr-3 rounded-r-2xl border border-amber-100/40 shadow-sm">
+                                <p class="italic text-emerald-950 font-medium text-sm md:text-base">
+                                    "TERPANA hadir bukan sekadar untuk berbisnis. Kami hadir sebagai bagian dari solusi gizi dan ketahanan pangan nasional."
+                                </p>
+                            </div>
+
+                            <p class="text-xs md:text-sm text-slate-500">
+                                Didirikan pada <span class="text-emerald-700 font-semibold">23 September 2024 oleh Zahra Dwi Rachmadhani</span> (Mahasiswi Manajemen UPN "Veteran" Yogyakarta), kami bertransformasi menjadi peternakan modern berbasis pakan herbal ilmiah demi menghasilkan telur yang sehat, aman, dan terjangkau.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="lg:col-span-5 relative flex justify-center items-center mt-8 lg:mt-0">
+                        <div class="relative w-full max-w-[420px] aspect-[4/5] rounded-[2.5rem] overflow-hidden shadow-2xl border-4 border-slate-100 group">
+                            <img src="AYAM 1.avif" alt="Peternakan Modern Terpana" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                            <div class="absolute inset-0 bg-gradient-to-t from-slate-900/20 via-transparent to-transparent"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="produk" class="py-24 px-6 bg-slate-50/50">
+            <div class="max-w-7xl mx-auto space-y-16">
+                <div class="text-center max-w-2xl mx-auto space-y-3">
+                    <span class="text-xs font-extrabold text-amber-600 uppercase tracking-widest block">Inovasi Pangan</span>
+                    <h2 class="text-3xl md:text-5xl font-black text-slate-900 tracking-tight">Telur Herbal Non-AGP</h2>
+                    <p class="text-slate-600 text-sm md:text-base leading-relaxed">
+                        Telur segar dari ayam petelur yang diberi pakan berbahan herbal alami tanpa <em>Antibiotic Growth Promoter</em> (AGP). Kuning lebih pekat, cangkang lebih kuat, dan bebas residu antibiotik sintetis.
+                    </p>
+                </div>
+                <div class="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div class="bg-white p-6 rounded-2xl border border-emerald-500/5 shadow-sm flex gap-4">
+                        <div class="w-10 h-10 shrink-0 bg-amber-100 rounded-xl flex items-center justify-center text-amber-700 font-bold"><i class="fa-solid fa-circle"></i></div>
+                        <div>
+                            <h4 class="font-bold text-slate-900 text-sm md:text-base">Kuning Telur Pekat</h4>
+                            <p class="text-xs md:text-sm text-slate-500 mt-1">Kuning telur berwarna lebih pekat & kaya akan kandungan mikronutrisi esensial.</p>
+                        </div>
+                    </div>
+                    <div class="bg-white p-6 rounded-2xl border border-emerald-500/5 shadow-sm flex gap-4">
+                        <div class="w-10 h-10 shrink-0 bg-emerald-100 rounded-xl flex items-center justify-center text-emerald-700 font-bold"><i class="fa-solid fa-shield"></i></div>
+                        <div>
+                            <h4 class="font-bold text-slate-900 text-sm md:text-base">Cangkang Lebih Tebal</h4>
+                            <p class="text-xs md:text-sm text-slate-500 mt-1">Struktur cangkang kokoh, meminimalisir risiko retak selama proses distribusi.</p>
+                        </div>
+                    </div>
+                    <div class="bg-white p-6 rounded-2xl border border-emerald-500/5 shadow-sm flex gap-4">
+                        <div class="w-10 h-10 shrink-0 bg-teal-100 rounded-xl flex items-center justify-center text-teal-700 font-bold"><i class="fa-solid fa-ban"></i></div>
+                        <div>
+                            <h4 class="font-bold text-slate-900 text-sm md:text-base">Bebas Residu Antibiotik</h4>
+                            <p class="text-xs md:text-sm text-slate-500 mt-1">100% aman dari ancaman resistensi akibat paparan zat kimia sintetis jangka panjang.</p>
+                        </div>
+                    </div>
+                    <div class="bg-white p-6 rounded-2xl border border-emerald-500/5 shadow-sm flex gap-4">
+                        <div class="w-10 h-10 shrink-0 bg-blue-100 rounded-xl flex items-center justify-center text-blue-700 font-bold"><i class="fa-solid fa-qrcode"></i></div>
+                        <div>
+                            <h4 class="font-bold text-slate-900 text-sm md:text-base">QR Code Transparansi</h4>
+                            <p class="text-xs md:text-sm text-slate-500 mt-1">Lacak langsung tanggal panen dan jaminan transparansi sistem produksi kami.</p>
+                        </div>
+                    </div>
+                    <div class="bg-white p-6 rounded-2xl border border-emerald-500/5 shadow-sm flex gap-4 sm:col-span-2">
+                        <div class="w-10 h-10 shrink-0 bg-stone-100 rounded-xl flex items-center justify-center text-stone-700 font-bold"><i class="fa-solid fa-box"></i></div>
+                        <div>
+                            <h4 class="font-bold text-slate-900 text-sm md:text-base">Kemasan Ramah Lingkungan</h4>
+                            <p class="text-xs md:text-sm text-slate-500 mt-1">Menggunakan boks karton daur ulang eksklusif yang kokoh dan mengurangi dampak sampah plastik.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <div class="text-center max-w-2xl mx-auto space-y-2 pt-4">
+        <h3 class="text-2xl md:text-4xl font-black text-slate-900 tracking-tight">
+            Apa yang Dimakan Ayam <span class="text-amber-500">TERPANA</span>?
+        </h3>
+        <p class="text-slate-600 text-sm md:text-base leading-relaxed">
+            Kami menggunakan bahan-bahan herbal alami pilihan dalam formulasi pakan ayam.
+        </p>
+    </div>
+
+    <div>
+
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+
+        <!-- Spirulina -->
+        <div class="p-4 bg-white border border-emerald-100/70 rounded-2xl flex items-start gap-4 shadow-sm">
+            <div class="w-16 h-16 md:w-20 md:h-20 shrink-0 rounded-full overflow-hidden border-4 border-[#2d6a4f] shadow-md">
+                <img src="SPIRULINA.png" alt="Spirulina" class="w-full h-full object-cover" onerror="this.src='https://images.unsplash.com/photo-1516448620398-c5f44bf9f441?auto=format&fit=crop&q=80&w=200'">
+            </div>
+            <div>
+                <h4 class="font-black text-sm md:text-base text-slate-900 uppercase tracking-wide">Spirulina</h4>
+                <p class="text-xs md:text-sm text-slate-600 mt-1 leading-relaxed">
+                    Meningkatkan warna kuning telur, kapasitas antioksidan, dan kesehatan fisiologis ayam petelur.
+                </p>
+            </div>
+        </div>
+
+        <!-- Jahe -->
+        <div class="p-4 bg-white border border-emerald-100/70 rounded-2xl flex items-start gap-4 shadow-sm">
+            <div class="w-16 h-16 md:w-20 md:h-20 shrink-0 rounded-full overflow-hidden border-4 border-[#2d6a4f] shadow-md">
+                <img src="JAHE.jpg" alt="Jahe" class="w-full h-full object-cover" onerror="this.src='https://images.unsplash.com/photo-1516448620398-c5f44bf9f441?auto=format&fit=crop&q=80&w=200'">
+            </div>
+            <div>
+                <h4 class="font-black text-sm md:text-base text-slate-900 uppercase tracking-wide">Jahe</h4>
+                <p class="text-xs md:text-sm text-slate-600 mt-1 leading-relaxed">
+                    Meningkatkan HDP ±3–5%, memperbaiki FCR, mengandung gingerol sebagai antiinflamasi dan antimikroba alami, mendukung kesehatan pencernaan dan efisiensi metabolisme nutrien.
+                </p>
+            </div>
+        </div>
+
+        <!-- Jagung -->
+        <div class="p-4 bg-white border border-emerald-100/70 rounded-2xl flex items-start gap-4 shadow-sm">
+            <div class="w-16 h-16 md:w-20 md:h-20 shrink-0 rounded-full overflow-hidden border-4 border-[#2d6a4f] shadow-md">
+                <img src="JAGUNG.jpg" alt="Jagung" class="w-full h-full object-cover" onerror="this.src='https://images.unsplash.com/photo-1516448620398-c5f44bf9f441?auto=format&fit=crop&q=80&w=200'">
+            </div>
+            <div>
+                <h4 class="font-black text-sm md:text-base text-slate-900 uppercase tracking-wide">Jagung</h4>
+                <p class="text-xs md:text-sm text-slate-600 mt-1 leading-relaxed">
+                    Sebagai sumber energi utama dalam formulasi pakan ayam.
+                </p>
+            </div>
+        </div>
+
+        <!-- Kunyit -->
+        <div class="p-4 bg-white border border-emerald-100/70 rounded-2xl flex items-start gap-4 shadow-sm">
+            <div class="w-16 h-16 md:w-20 md:h-20 shrink-0 rounded-full overflow-hidden border-4 border-[#2d6a4f] shadow-md">
+                <img src="KUNYIT.jpg" alt="Kunyit" class="w-full h-full object-cover" onerror="this.src='https://images.unsplash.com/photo-1516448620398-c5f44bf9f441?auto=format&fit=crop&q=80&w=200'">
+            </div>
+            <div>
+                <h4 class="font-black text-sm md:text-base text-slate-900 uppercase tracking-wide">Kunyit</h4>
+                <p class="text-xs md:text-sm text-slate-600 mt-1 leading-relaxed">
+                    Meningkatkan warna kuning telur, aktivitas antioksidan, bobot telur (+2–4 g/butir), efisiensi konversi pakan, serta kualitas dan stabilitas mutu telur.
+                </p>
+            </div>
+        </div>
+
+        <!-- Daun Kelor -->
+        <div class="p-4 bg-white border border-emerald-100/70 rounded-2xl flex items-start gap-4 shadow-sm">
+            <div class="w-16 h-16 md:w-20 md:h-20 shrink-0 rounded-full overflow-hidden border-4 border-[#2d6a4f] shadow-md">
+                <img src="DAUN KELOR.jpg" alt="Daun Kelor" class="w-full h-full object-cover" onerror="this.src='https://images.unsplash.com/photo-1516448620398-c5f44bf9f441?auto=format&fit=crop&q=80&w=200'">
+            </div>
+            <div>
+                <h4 class="font-black text-sm md:text-base text-slate-900 uppercase tracking-wide">Daun Kelor</h4>
+                <p class="text-xs md:text-sm text-slate-600 mt-1 leading-relaxed">
+                    Meningkatkan produksi dan kualitas telur, efisiensi pakan, imunitas, serta mendukung kesehatan pencernaan ayam petelur.
+                </p>
+            </div>
+        </div>
+
+        <!-- Bawang Putih -->
+        <div class="p-4 bg-white border border-emerald-100/70 rounded-2xl flex items-start gap-4 shadow-sm">
+            <div class="w-16 h-16 md:w-20 md:h-20 shrink-0 rounded-full overflow-hidden border-4 border-[#2d6a4f] shadow-md">
+                <img src="BAWANG PUTIH.avif" alt="Bawang Putih" class="w-full h-full object-cover" onerror="this.src='https://images.unsplash.com/photo-1516448620398-c5f44bf9f441?auto=format&fit=crop&q=80&w=200'">
+            </div>
+            <div>
+                <h4 class="font-black text-sm md:text-base text-slate-900 uppercase tracking-wide">Bawang Putih</h4>
+                <p class="text-xs md:text-sm text-slate-600 mt-1 leading-relaxed">
+                    Meningkatkan daya tahan tubuh, bersifat antibakteri dan antimikroba alami, menyehatkan saluran pencernaan, meningkatkan efisiensi pakan (FCR), serta mendukung produksi dan kualitas telur.
+                </p>
+            </div>
+        </div>
+
+        <!-- Temulawak -->
+        <div class="p-4 bg-white border border-emerald-100/70 rounded-2xl flex items-start gap-4 shadow-sm">
+            <div class="w-16 h-16 md:w-20 md:h-20 shrink-0 rounded-full overflow-hidden border-4 border-[#2d6a4f] shadow-md">
+                <img src="TEMULAWAK.jpg" alt="Temulawak" class="w-full h-full object-cover" onerror="this.src='https://images.unsplash.com/photo-1516448620398-c5f44bf9f441?auto=format&fit=crop&q=80&w=200'">
+            </div>
+            <div>
+                <h4 class="font-black text-sm md:text-base text-slate-900 uppercase tracking-wide">Temulawak</h4>
+                <p class="text-xs md:text-sm text-slate-600 mt-1 leading-relaxed">
+                    Sebagai komponen fitogenik berkontribusi terhadap peningkatan respons fisiologis serta daya tahan ternak.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<section id="proses" class="py-24 px-6 bg-white">
+    <div class="max-w-7xl mx-auto space-y-16">
+        <div class="text-center max-w-2xl mx-auto space-y-3">
+            <span class="text-xs font-extrabold text-amber-600 uppercase tracking-widest block">Alur Produksi</span>
+            <h2 class="text-3xl md:text-5xl font-black text-slate-900 tracking-tight">
+                Dari Kandang <span class="bg-gradient-to-r from-emerald-700 via-teal-600 to-amber-600 bg-clip-text text-transparent">Ke Meja Makan</span>
+            </h2>
+            <p class="text-slate-600 text-sm md:text-base leading-relaxed">
+                Lima tahap produksi yang kami jaga kualitasnya, mulai dari pemeliharaan ayam hingga telur sampai di tangan Anda.
+            </p>
+        </div>
+
+        <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-6">
+
+            <!-- 1. Pemeliharaan Ayam -->
+            <div class="flex flex-col items-center text-center gap-3">
+                <span class="w-9 h-9 flex items-center justify-center rounded-full bg-[#2d6a4f] text-white font-black text-sm shadow-md">1</span>
+                <div class="w-full aspect-square rounded-2xl overflow-hidden shadow-md border-2 border-emerald-100">
+                    <img src="PEMELIHARAAN AYAM.jpeg" alt="Pemeliharaan Ayam" class="w-full h-full object-cover" onerror="this.src='https://images.unsplash.com/photo-1516448620398-c5f44bf9f441?auto=format&fit=crop&q=80&w=300'">
+                </div>
+                <h4 class="font-bold text-xs md:text-sm text-slate-900">Pemeliharaan Ayam</h4>
+            </div>
+
+            <!-- 2. Pakan Herbal -->
+            <div class="flex flex-col items-center text-center gap-3">
+                <span class="w-9 h-9 flex items-center justify-center rounded-full bg-[#2d6a4f] text-white font-black text-sm shadow-md">2</span>
+                <div class="w-full aspect-square rounded-2xl overflow-hidden shadow-md border-2 border-emerald-100">
+                    <img src="PAKAN AYAM.jpeg" class="w-full h-full object-cover" onerror="this.src='https://images.unsplash.com/photo-1516448620398-c5f44bf9f441?auto=format&fit=crop&q=80&w=300'">
+                </div>
+                <h4 class="font-bold text-xs md:text-sm text-slate-900">Pakan Herbal</h4>
+            </div>
+
+            <!-- 3. Produksi Telur -->
+            <div class="flex flex-col items-center text-center gap-3">
+                <span class="w-9 h-9 flex items-center justify-center rounded-full bg-[#2d6a4f] text-white font-black text-sm shadow-md">3</span>
+                <div class="w-full aspect-square rounded-2xl overflow-hidden shadow-md border-2 border-emerald-100">
+                    <img src="PRODUKSI TELUR.webp" alt="Produksi Telur" class="w-full h-full object-cover" onerror="this.src='https://images.unsplash.com/photo-1516448620398-c5f44bf9f441?auto=format&fit=crop&q=80&w=300'">
+                </div>
+                <h4 class="font-bold text-xs md:text-sm text-slate-900">Produksi Telur</h4>
+            </div>
+
+            <!-- 4. Sortasi & Pengemasan -->
+            <div class="flex flex-col items-center text-center gap-3">
+                <span class="w-9 h-9 flex items-center justify-center rounded-full bg-[#2d6a4f] text-white font-black text-sm shadow-md">4</span>
+                <div class="w-full aspect-square rounded-2xl overflow-hidden shadow-md border-2 border-emerald-100">
+                    <img src="TELUR KEMASAN.png" alt="Sortasi dan Pengemasan" class="w-full h-full object-cover" onerror="this.src='https://images.unsplash.com/photo-1516448620398-c5f44bf9f441?auto=format&fit=crop&q=80&w=300'">
+                </div>
+                <h4 class="font-bold text-xs md:text-sm text-slate-900">Sortasi & Pengemasan</h4>
+            </div>
+
+            <!-- 5. Sampai ke Konsumen -->
+            <div class="flex flex-col items-center text-center gap-3 col-span-2 sm:col-span-1">
+                <span class="w-9 h-9 flex items-center justify-center rounded-full bg-[#2d6a4f] text-white font-black text-sm shadow-md">5</span>
+                <div class="w-full aspect-square rounded-2xl overflow-hidden shadow-md border-2 border-emerald-100 max-w-[200px] sm:max-w-none mx-auto">
+                    <img src="TELUR KONSUMEN.jpg" alt="Sampai ke Konsumen" class="w-full h-full object-cover" onerror="this.src='https://images.unsplash.com/photo-1516448620398-c5f44bf9f441?auto=format&fit=crop&q=80&w=300'">
+                </div>
+                <h4 class="font-bold text-xs md:text-sm text-slate-900">Sampai ke Konsumen</h4>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section id="keunggulan" class="py-24 bg-white px-6 border-y border-slate-100">
+    <div class="max-w-7xl mx-auto">
+        <div class="text-center max-w-2xl mx-auto mb-16 space-y-3">
+            <span class="text-xs font-extrabold text-emerald-700 uppercase tracking-widest block">Bukan Sekadar Klaim</span>
+            <h2 class="text-3xl md:text-5xl font-black text-slate-900 tracking-tight">Keunggulan Utama TERPANA</h2>
+            <p class="text-slate-500 text-base md:text-lg">Setiap keunggulan TERPANA didukung riset ilmiah dan terbukti dalam produksi nyata.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-20">
+            <div class="bg-[#fefce8]/60 p-8 rounded-[2rem] shadow-sm border border-amber-100/30 flex flex-col items-start text-left">
+                <div class="w-12 h-12 bg-emerald-100/70 rounded-[1rem] flex items-center justify-center text-xl mb-5 shadow-inner">
+                    <span class="text-emerald-700">🌿</span>
+                </div>
+                <h3 class="text-xl font-bold text-slate-900 mb-3">Pakan Herbal Berbasis Riset</h3>
+                <p class="text-slate-600 text-sm leading-relaxed">Formulasi pakan dari kunyit, jahe, temulawak, dan spirulina dipilih berdasarkan studi jurnal peternakan nasional & internasional. Terstandar dosis, bukan sekadar campuran.</p>
+            </div>
+
+            <div class="bg-[#fefce8]/60 p-8 rounded-[2rem] shadow-sm border border-amber-100/30 flex flex-col items-start text-left">
+                <div class="w-12 h-12 bg-rose-100/70 rounded-[1rem] flex items-center justify-center text-xl mb-5 shadow-inner">
+                    <span class="text-rose-600">🚫</span>
+                </div>
+                <h3 class="text-xl font-bold text-slate-900 mb-3">Bebas Antibiotik (Non-AGP)</h3>
+                <p class="text-slate-600 text-sm leading-relaxed">Tidak ada Antibiotic Growth Promoter dalam seluruh proses produksi. Aman dikonsumsi harian, termasuk oleh anak-anak dan ibu hamil yang menjadi sasaran program MBG.</p>
+            </div>
+
+            <div class="bg-[#fefce8]/60 p-8 rounded-[2rem] shadow-sm border border-amber-100/30 flex flex-col items-start text-left">
+                <div class="w-12 h-12 bg-amber-100/80 rounded-[1rem] flex items-center justify-center text-xl mb-5 shadow-inner">
+                    <span class="text-amber-700">♻️</span>
+                </div>
+                <h3 class="text-xl font-bold text-slate-900 mb-3">Circular Farm Economy</h3>
+                <p class="text-slate-600 text-sm leading-relaxed">
+
+                    Limbah kandang tidak dibuang dan diolah jadi pupuk organik untuk petani sekitar. Satu-satunya peternakan di Kecamatan Dukun yang menjalankan sistem ekonomi sirkular secara aktif.</p>
+            </div>
+
+            <div class="bg-[#fefce8]/60 p-8 rounded-[2rem] shadow-sm border border-amber-100/30 flex flex-col items-start text-left">
+                <div class="w-12 h-12 bg-blue-100/70 rounded-[1rem] flex items-center justify-center text-xl mb-5 shadow-inner">
+                    <span class="text-blue-600">🔍</span>
+                </div>
+                <h3 class="text-xl font-bold text-slate-900 mb-3">Transparansi Produksi Penuh</h3>
+                <p class="text-slate-600 text-sm leading-relaxed">QR code di setiap kemasan menghubungkan Anda dengan informasi lengkap proses produksi dari pakan yang diberikan hingga proses pengemasan. Keterbukaan adalah janji kami.</p>
+            </div>
+        </div>
+
+        <div class="text-center max-w-2xl mx-auto mb-8 space-y-2">
+            <span class="inline-block bg-emerald-800/10 text-emerald-800 font-extrabold text-xs px-4 py-1.5 rounded-full uppercase tracking-widest">
+                Perbandingan Produk
+            </span>
+            <h3 class="text-2xl md:text-4xl font-black text-slate-900 tracking-tight">TERPANA vs. Telur Konvensional</h3>
+        </div>
+
+        <div class="max-w-4xl mx-auto overflow-hidden bg-[#2d6a4f] rounded-3xl shadow-xl shadow-emerald-900/20 p-2">
+            <div class="overflow-x-auto rounded-2xl">
+                <table class="w-full text-left border-collapse">
+                    <thead>
+                        <tr class="bg-[#1b4332] text-white text-sm md:text-base">
+                            <th class="p-5 font-bold tracking-wide">Aspek</th>
+                            <th class="p-5 font-bold tracking-wide text-[#cbd5e1]/80">Telur Konvensional</th>
+                            <th class="p-5 font-bold tracking-wide bg-[#d97706] text-white rounded-t-xl">
+                                <span class="inline-flex items-center gap-1.5">🥚 Telur Herbal TERPANA</span>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody class="text-xs md:text-sm text-white/90 font-medium">
+                        <tr class="border-b border-[#40916c]/30 hover:bg-[#40916c]/20 transition-colors">
+                            <td class="p-5 font-semibold text-emerald-100">Bahan Pakan</td>
+                            <td class="p-5 text-rose-300"><span class="mr-1.5">✕</span> Campuran kimia + AGP</td>
+                            <td class="p-5 bg-[#40916c]/30 font-bold text-amber-300 border-x border-[#40916c]/20"><span class="mr-1.5">✓</span> 100% Herbal Alami</td>
+                        </tr>
+                        <tr class="border-b border-[#40916c]/30 hover:bg-[#40916c]/20 transition-colors">
+                            <td class="p-5 font-semibold text-emerald-100">Residu Antibiotik</td>
+                            <td class="p-5 text-rose-300"><span class="mr-1.5">✕</span> Berpotensi ada</td>
+                            <td class="p-5 bg-[#40916c]/30 font-bold text-amber-300 border-x border-[#40916c]/20"><span class="mr-1.5">✓</span> Bebas AGP Sepenuhnya</td>
+                        </tr>
+                        <tr class="border-b border-[#40916c]/30 hover:bg-[#40916c]/20 transition-colors">
+                            <td class="p-5 font-semibold text-emerald-100">Warna Kuning Telur</td>
+                            <td class="p-5 text-rose-300"><span class="mr-1.5">✕</span> Pucat & standar</td>
+                            <td class="p-5 bg-[#40916c]/30 font-bold text-amber-300 border-x border-[#40916c]/20"><span class="mr-1.5">✓</span> Lebih pekat & kaya</td>
+                        </tr>
+                        <tr class="border-b border-[#40916c]/30 hover:bg-[#40916c]/20 transition-colors">
+                            <td class="p-5 font-semibold text-emerald-100">Ketebalan Cangkang</td>
+                            <td class="p-5 text-emerald-200/70">Standar</td>
+                            <td class="p-5 bg-[#40916c]/30 font-bold text-amber-300 border-x border-[#40916c]/20"><span class="mr-1.5">✓</span> Lebih tebal & tahan</td>
+                        </tr>
+                        <tr class="border-b border-[#40916c]/30 hover:bg-[#40916c]/20 transition-colors">
+                            <td class="p-5 font-semibold text-emerald-100">Kemasan</td>
+                            <td class="p-5 text-rose-300"><span class="mr-1.5">✕</span> Plastik konvensional</td>
+                            <td class="p-5 bg-[#40916c]/30 font-bold text-amber-300 border-x border-[#40916c]/20"><span class="mr-1.5">✓</span> Eco-friendly + QR Code</td>
+                        </tr>
+                        <tr class="border-b border-[#40916c]/30 hover:bg-[#40916c]/20 transition-colors">
+                            <td class="p-5 font-semibold text-emerald-100">Transparansi Produksi</td>
+                            <td class="p-5 text-rose-300"><span class="mr-1.5">✕</span> Tidak ada</td>
+                            <td class="p-5 bg-[#40916c]/30 font-bold text-amber-300 border-x border-[#40916c]/20"><span class="mr-1.5">✓</span> QR Code Tracking</td>
+                        </tr>
+                        <tr class="hover:bg-[#40916c]/20 transition-colors">
+                            <td class="p-5 font-semibold text-emerald-100">Promosi Digital</td>
+                            <td class="p-5 text-rose-300"><span class="mr-1.5">✕</span> Kompetitor belum aktif</td>
+                            <td class="p-5 bg-[#40916c]/30 font-bold text-amber-300 border-x border-[#40916c]/20 rounded-b-xl"><span class="mr-1.5">✓</span> Instagram & Facebook aktif</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="dampak" class="py-24 px-6 bg-slate-50/40">
+    <div class="max-w-7xl mx-auto text-center space-y-12">
+        <div class="space-y-4 max-w-2xl mx-auto">
+            <span class="inline-block bg-emerald-100 text-emerald-800 text-xs font-extrabold px-4 py-1.5 rounded-full uppercase tracking-widest">
+                DAMPAK & MISI
+            </span>
+            <h2 class="text-4xl md:text-5xl font-black text-slate-900 tracking-tight">TERPANA untuk Indonesia</h2>
+            <p class="text-slate-500 font-medium">Setiap butir telur yang Anda beli berkontribusi pada dampak yang lebih besar.</p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div class="bg-white p-8 rounded-[2rem] border border-slate-100 text-center flex flex-col items-center space-y-4 shadow-sm hover:shadow-xl transition-all duration-300">
+                <div class="text-4xl">🥚</div>
+                <h3 class="text-xl font-bold text-slate-900">Pemenuhan Gizi Keluarga</h3>
+                <p class="text-slate-500 text-sm leading-relaxed">
+                    Mendukung kecukupan protein masyarakat Kab. Magelang yang masih di bawah angka nasional (52,1 vs 57 gr/hari).
+                </p>
+            </div>
+
+            <div class="bg-white p-8 rounded-[2rem] border border-slate-100 text-center flex flex-col items-center space-y-4 shadow-sm hover:shadow-xl transition-all duration-300">
+                <div class="text-4xl">👶</div>
+                <h3 class="text-xl font-bold text-slate-900">Pencegahan Stunting</h3>
+                <p class="text-slate-500 text-sm leading-relaxed">
+                    Telur herbal berkualitas sebagai sumber protein premium yang dapat diakses semua kalangan untuk pertumbuhan anak Indonesia.
+                </p>
+            </div>
+
+            <div class="bg-white p-8 rounded-[2rem] border border-slate-100 text-center flex flex-col items-center space-y-4 shadow-sm hover:shadow-xl transition-all duration-300">
+                <div class="text-4xl">🌱</div>
+                <h3 class="text-xl font-bold text-slate-900">Pertanian Berkelanjutan</h3>
+                <p class="text-slate-500 text-sm leading-relaxed">
+                    Pupuk organik dari limbah kandang membantu petani sekitar mengurangi ketergantungan pada pupuk kimia yang mahal.
+                </p>
+            </div>
+
+            <div class="bg-white p-8 rounded-[2rem] border border-slate-100 text-center flex flex-col items-center space-y-4 shadow-sm hover:shadow-xl transition-all duration-300">
+                <div class="text-4xl">🤝</div>
+                <h3 class="text-xl font-bold text-slate-900">Ekonomi Lokal</h3>
+                <p class="text-slate-500 text-sm leading-relaxed">
+                    Membuka peluang kerja dan mendukung ekosistem UMKM peternakan di Kabupaten Magelang dan sekitarnya.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="testimoni" class="py-24 px-6 bg-white">
+    <div class="max-w-7xl mx-auto">
+        <div class="text-center max-w-2xl mx-auto mb-12 space-y-3">
+            <span class="inline-block bg-emerald-100 text-emerald-800 font-extrabold text-xs px-4 py-1.5 rounded-full uppercase tracking-widest">TESTIMONI</span>
+            <h2 class="text-3xl md:text-5xl font-black text-slate-900 tracking-tight">Apa Kata Pelanggan Kami?</h2>
+            <p class="text-slate-500 text-sm md:text-base">Kepercayaan pelanggan adalah aset terbesar kami.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="bg-white p-8 rounded-[2rem] shadow-md border border-slate-100 flex flex-col justify-between">
+                <div class="space-y-4">
+                    <div class="flex text-amber-500 gap-1 text-sm">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-slate-600 italic leading-relaxed text-sm">
+                        "Saya sudah langganan telur TERPANA hampir 3 bulan. Kuning telurnya memang beda — lebih pekat dan rasanya lebih enak. Anak saya suka banget. Harganya juga masih oke untuk kualitas segini."
+                    </p>
+                </div>
+                <div class="flex items-center gap-4 pt-6 mt-6 border-t border-slate-100">
+                    <div class="w-12 h-12 bg-emerald-100 text-emerald-800 font-bold rounded-full flex items-center justify-center">S</div>
+                    <div>
+                        <h4 class="font-bold text-slate-900 text-sm">Ibu Sari Wulandari</h4>
+                        <p class="text-slate-400 text-xs">Ibu Rumah Tangga, Kec. Dukun</p>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-white p-8 rounded-[2rem] shadow-md border border-slate-100 flex flex-col justify-between">
+                <div class="space-y-4">
+                    <div class="flex text-amber-500 gap-1 text-sm">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-slate-600 italic leading-relaxed text-sm">
+                        "Naufal Mart sudah bermitra dengan TERPANA sejak awal. Pelanggan kami banyak yang repeat order telur herbalnya. Stok selalu segar dan pengiriman tepat waktu."
+                    </p>
+                </div>
+                <div class="flex items-center gap-4 pt-6 mt-6 border-t border-slate-100">
+                    <div class="w-12 h-12 bg-emerald-100 text-emerald-800 font-bold rounded-full flex items-center justify-center">N</div>
+                    <div>
+                        <h4 class="font-bold text-slate-900 text-sm">Pemilik Naufal Mart</h4>
+                        <p class="text-slate-400 text-xs">Mitra Distribusi, Kec. Dukun</p>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-white p-8 rounded-[2rem] shadow-md border border-slate-100 flex flex-col justify-between">
+                <div class="space-y-4">
+                    <div class="flex text-amber-500 gap-1 text-sm">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-slate-600 italic leading-relaxed text-sm">
+                        "Sebagai konsumen yang peduli kesehatan, saya sangat senang ada produk lokal seperti TERPANA. Harganya jauh lebih terjangkau dari produk herbal lain, kualitasnya tidak mengecewakan."
+                    </p>
+                </div>
+                <div class="flex items-center gap-4 pt-6 mt-6 border-t border-slate-100">
+                    <div class="w-12 h-12 bg-emerald-100 text-emerald-800 font-bold rounded-full flex items-center justify-center">R</div>
+                    <div>
+                        <h4 class="font-bold text-slate-900 text-sm">Rizky Aditya</h4>
+                        <p class="text-slate-400 text-xs">Konsumen Health-Conscious, Magelang</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="testimoni" class="py-24 px-6 bg-white">
+    <div class="max-w-7xl mx-auto">
+        <div class="text-center max-w-2xl mx-auto mb-16 space-y-3">
+            <span class="inline-block bg-emerald-100 text-emerald-800 font-extrabold text-xs px-4 py-1.5 rounded-full uppercase tracking-widest">TESTIMONI</span>
+            <h2 class="text-3xl md:text-5xl font-black text-slate-900 tracking-tight">Apa Kata Pelanggan Kami?</h2>
+            <p class="text-slate-500 text-sm md:text-base">Kepercayaan pelanggan adalah aset terbesar kami.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            <div class="bg-slate-50/50 p-8 rounded-[2rem] border border-slate-100 flex flex-col justify-between shadow-sm">
+                <div class="space-y-4">
+                    <div class="flex text-amber-500 gap-1 text-sm">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-slate-600 italic leading-relaxed text-sm">
+                        "Saya sudah langganan telur TERPANA hampir 3 bulan. Kuning telurnya memang beda — lebih pekat dan rasanya lebih enak. Anak saya suka banget. Harganya juga masih oke untuk kualitas segini."
+                    </p>
+                </div>
+                <div class="flex items-center gap-4 pt-6 mt-6 border-t border-slate-100">
+                    <div class="w-12 h-12 bg-emerald-100 text-emerald-800 font-bold rounded-full flex items-center justify-center">S</div>
+                    <div>
+                        <h4 class="font-bold text-slate-900 text-sm">Ibu Sari Wulandari</h4>
+                        <p class="text-slate-400 text-xs">Ibu Rumah Tangga, Kec. Dukun</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-slate-50/50 p-8 rounded-[2rem] border border-slate-100 flex flex-col justify-between shadow-sm">
+                <div class="space-y-4">
+                    <div class="flex text-amber-500 gap-1 text-sm">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-slate-600 italic leading-relaxed text-sm">
+                        "Naufal Mart sudah bermitra dengan TERPANA sejak awal. Pelanggan kami banyak yang repeat order telur herbalnya. Stok selalu segar dan pengiriman tepat waktu."
+                    </p>
+                </div>
+                <div class="flex items-center gap-4 pt-6 mt-6 border-t border-slate-100">
+                    <div class="w-12 h-12 bg-emerald-100 text-emerald-800 font-bold rounded-full flex items-center justify-center">N</div>
+                    <div>
+                        <h4 class="font-bold text-slate-900 text-sm">Pemilik Naufal Mart</h4>
+                        <p class="text-slate-400 text-xs">Mitra Distribusi, Kec. Dukun</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-slate-50/50 p-8 rounded-[2rem] border border-slate-100 flex flex-col justify-between shadow-sm">
+                <div class="space-y-4">
+                    <div class="flex text-amber-500 gap-1 text-sm">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-slate-600 italic leading-relaxed text-sm">
+                        "Sebagai konsumen yang peduli kesehatan, saya sangat senang ada produk lokal seperti TERPANA. Harganya jauh lebih terjangkau dari produk herbal lain, kualitasnya tidak mengecewakan."
+                    </p>
+                </div>
+                <div class="flex items-center gap-4 pt-6 mt-6 border-t border-slate-100">
+                    <div class="w-12 h-12 bg-emerald-100 text-emerald-800 font-bold rounded-full flex items-center justify-center">R</div>
+                    <div>
+                        <h4 class="font-bold text-slate-900 text-sm">Rizky Aditya</h4>
+                        <p class="text-slate-400 text-xs">Konsumen Health-Conscious, Magelang</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="faq" class="py-24 px-6 bg-slate-50/50">
+    <div class="max-w-7xl mx-auto">
+        <div class="text-center max-w-2xl mx-auto mb-16 space-y-3">
+            <h2 class="text-3xl md:text-5xl font-black text-slate-900 tracking-tight">Pertanyaan yang Sering Diajukan</h2>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-6xl mx-auto">
+            <div class="bg-[#fefce8]/60 rounded-2xl border border-amber-100 shadow-sm overflow-hidden">
+                <details class="group p-6">
+                    <summary class="flex items-center justify-between cursor-pointer focus:outline-none select-none">
+                        <h3 class="text-base font-bold text-slate-900 pr-4 transition-colors group-hover:text-emerald-700">
+                            Apa bedanya telur TERPANA dengan telur biasa?
+                        </h3>
+                        <span class="w-6 h-6 shrink-0 bg-emerald-50 rounded-full flex items-center justify-center text-emerald-700 transition-transform duration-300 group-open:rotate-45">
+                            <i class="fa-solid fa-plus text-xs"></i>
+                        </span>
+                    </summary>
+                    <p class="mt-4 text-slate-600 text-sm leading-relaxed border-t pt-4 border-slate-200/60">
+                        Telur TERPANA dihasilkan dari ayam yang diberi pakan herbal alami (kunyit, jahe, temulawak, spirulina) tanpa AGP. Hasilnya: kuning lebih pekat, cangkang lebih kuat, dan bebas residu antibiotik berbahaya.
+                    </p>
+                </details>
+            </div>
+
+            <div class="bg-[#fefce8]/60 rounded-2xl border border-amber-100 shadow-sm overflow-hidden">
+                <details class="group p-6">
+                    <summary class="flex items-center justify-between cursor-pointer focus:outline-none select-none">
+                        <h3 class="text-base font-bold text-slate-900 pr-4 transition-colors group-hover:text-emerald-700">
+                            Apakah ada harga khusus untuk pembelian besar?
+                        </h3>
+                        <span class="w-6 h-6 shrink-0 bg-emerald-50 rounded-full flex items-center justify-center text-emerald-700 transition-transform duration-300 group-open:rotate-45">
+                            <i class="fa-solid fa-plus text-xs"></i>
+                        </span>
+                    </summary>
+                    <p class="mt-4 text-slate-600 text-sm leading-relaxed border-t pt-4 border-slate-200/60">
+                        Ya! Untuk pembelian B2B (toko, agen, mitra distribusi), kami menyediakan harga khusus dengan sistem recurring order. Hubungi kami langsung untuk negosiasi harga kemitraan.
+                    </p>
+                </details>
+            </div>
+
+            <div class="bg-[#fefce8]/60 rounded-2xl border border-amber-100 shadow-sm overflow-hidden">
+                <details class="group p-6">
+                    <summary class="flex items-center justify-between cursor-pointer focus:outline-none select-none">
+                        <h3 class="text-base font-bold text-slate-900 pr-4 transition-colors group-hover:text-emerald-700">
+                            Di mana saya bisa membeli telur TERPANA?
+                        </h3>
+                        <span class="w-6 h-6 shrink-0 bg-emerald-50 rounded-full flex items-center justify-center text-emerald-700 transition-transform duration-300 group-open:rotate-45">
+                            <i class="fa-solid fa-plus text-xs"></i>
+                        </span>
+                    </summary>
+                    <p class="mt-4 text-slate-600 text-sm leading-relaxed border-t pt-4 border-slate-200/60">
+                        Beli langsung di lokasi produksi kami di Gowok Ringin, Kec. Dukun, Magelang. Juga tersedia di Naufal Mart dan Agen Basel PS. Pemesanan online via Instagram @terpanamu.id atau WhatsApp.
+                    </p>
+                </details>
+            </div>
+
+            <div class="bg-[#fefce8]/60 rounded-2xl border border-amber-100 shadow-sm overflow-hidden">
+                <details class="group p-6">
+                    <summary class="flex items-center justify-between cursor-pointer focus:outline-none select-none">
+                        <h3 class="text-base font-bold text-slate-900 pr-4 transition-colors group-hover:text-emerald-700">
+                            Apakah aman untuk anak-anak dan ibu hamil?
+                        </h3>
+                        <span class="w-6 h-6 shrink-0 bg-emerald-50 rounded-full flex items-center justify-center text-emerald-700 transition-transform duration-300 group-open:rotate-45">
+                            <i class="fa-solid fa-plus text-xs"></i>
+                        </span>
+                    </summary>
+                    <p class="mt-4 text-slate-600 text-sm leading-relaxed border-t pt-4 border-slate-200/60">
+                        Sangat aman! Justru telur Non-AGP sangat direkomendasikan untuk kelompok ini karena bebas residu antibiotik. Kami bahkan menargetkan kemitraan dengan Program Makan Bergizi Gratis (MBG) pemerintah.
+                    </p>
+                </details>
+            </div>
+
+            <div class="bg-[#fefce8]/60 rounded-2xl border border-amber-100 shadow-sm overflow-hidden">
+                <details class="group p-6">
+                    <summary class="flex items-center justify-between cursor-pointer focus:outline-none select-none">
+                        <h3 class="text-base font-bold text-slate-900 pr-4 transition-colors group-hover:text-emerald-700">
+                            Apakah TERPANA memiliki sertifikasi resmi?
+                        </h3>
+                        <span class="w-6 h-6 shrink-0 bg-emerald-50 rounded-full flex items-center justify-center text-emerald-700 transition-transform duration-300 group-open:rotate-45">
+                            <i class="fa-solid fa-plus text-xs"></i>
+                        </span>
+                    </summary>
+                    <p class="mt-4 text-slate-600 text-sm leading-relaxed border-t pt-4 border-slate-200/60">
+                        Kami sedang dalam proses pengajuan Nomor Kontrol Veteriner (NKV) dari Dinas Peternakan. Sementara itu, setiap kemasan dilengkapi QR code untuk transparansi proses produksi kami.
+                    </p>
+                </details>
+            </div>
+
+            <div class="bg-[#fefce8]/60 rounded-2xl border border-amber-100 shadow-sm overflow-hidden">
+                <details class="group p-6">
+                    <summary class="flex items-center justify-between cursor-pointer focus:outline-none select-none">
+                        <h3 class="text-base font-bold text-slate-900 pr-4 transition-colors group-hover:text-emerald-700">
+                            Bagaimana TERPANA mengelola limbah kandang?
+                        </h3>
+                        <span class="w-6 h-6 shrink-0 bg-emerald-50 rounded-full flex items-center justify-center text-emerald-700 transition-transform duration-300 group-open:rotate-45">
+                            <i class="fa-solid fa-plus text-xs"></i>
+                        </span>
+                    </summary>
+                    <p class="mt-4 text-slate-600 text-sm leading-relaxed border-t pt-4 border-slate-200/60">
+                        Seluruh limbah kandang diolah menjadi pupuk organik yang didistribusikan ke petani sekitar melalui Toko Pertanian Marem. Tidak ada pembuangan limbah langsung, ini merupakan komitmen circular farm economy kami.
+                    </p>
+                </details>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="kontak" class="py-24 px-6 bg-white">
+    <div class="max-w-7xl mx-auto">
+        <div class="text-center max-w-2xl mx-auto mb-16 space-y-3">
+            <span class="inline-block bg-emerald-100 text-emerald-800 font-extrabold text-xs px-4 py-1.5 rounded-full uppercase tracking-widest">HUBUNGI KAMI</span>
+            <h2 class="text-3xl md:text-5xl font-black text-slate-900 tracking-tight">Ada Pertanyaan atau Ingin Bermitra?</h2>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start max-w-6xl mx-auto">
+            <div class="lg:col-span-5 space-y-8">
+                <h3 class="text-xl font-bold text-slate-900 mb-6">Informasi Kontak</h3>
+
+                <div class="flex gap-4 items-start">
+                    <div class="w-10 h-10 bg-emerald-50 text-emerald-700 rounded-xl flex items-center justify-center shrink-0 border border-emerald-100">
+                        <i class="fa-solid fa-location-dot"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-slate-900 text-sm md:text-base">Lokasi Produksi</h4>
+                        <p class="text-slate-500 text-sm mt-1">Gowok Ringin, Sengi, Kecamatan Dukun, Kabupaten Magelang, Jawa Tengah</p>
+                    </div>
+                </div>
+
+                <div class="flex gap-4 items-start">
+                    <div class="w-10 h-10 bg-emerald-50 text-emerald-700 rounded-xl flex items-center justify-center shrink-0 border border-emerald-100">
+                        <i class="fa-brands fa-instagram"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-slate-900 text-sm md:text-base">Instagram</h4>
+                        <a href="https://instagram.com/terpanamu.id" target="_blank" class="text-emerald-700 hover:underline text-sm font-semibold mt-1 block">@terpanamu.id</a>
+                    </div>
+                </div>
+
+                <div class="flex gap-4 items-start">
+                    <div class="w-10 h-10 bg-emerald-50 text-emerald-700 rounded-xl flex items-center justify-center shrink-0 border border-emerald-100">
+                        <i class="fa-solid fa-comment"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-slate-900 text-sm md:text-base">WhatsApp</h4>
+                        <p class="text-slate-500 text-sm mt-1">Hubungi via tombol di bawah untuk respons tercepat</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="lg:col-span-7 bg-white p-8 md:p-10 rounded-[2.5rem] border border-slate-100 shadow-[0_20px_50px_-20px_rgba(4,120,87,0.1)] space-y-6">
+                <h3 class="text-2xl font-black text-slate-900">Hubungi Kami Langsung</h3>
+                <p class="text-slate-500 text-sm leading-relaxed">
+                    Tertarik bermitra, melakukan pembelian dalam jumlah besar, atau punya pertanyaan? Tim kami siap membantu Anda.
+                </p>
+
+                <div class="space-y-4 pt-2">
+                    <a href="https://wa.me/62882007653396" target="_blank" class="w-full bg-[#0fa47f] hover:bg-[#0b8063] text-white flex items-center justify-center gap-3 py-4 rounded-2xl font-bold shadow-lg transition-all transform hover:-translate-y-0.5 text-center">
+                        <i class="fa-brands fa-whatsapp text-xl"></i> Chat via WhatsApp
+                    </a>
+
+                    <a href="https://instagram.com/terpanamu.id" target="_blank" class="w-full bg-gradient-to-r from-[#b320bc] via-[#e83e58] to-[#f7a539] hover:opacity-95 text-white flex items-center justify-center gap-3 py-4 rounded-2xl font-bold shadow-lg transition-all transform hover:-translate-y-0.5 text-center">
+                        <i class="fa-brands fa-instagram text-xl"></i> terpanamu.id
+                    </a>
+                </div>>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer class="bg-slate-900 text-slate-400 py-12 px-6 border-t border-slate-800">
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
+        <div class="text-center md:text-left">
+            <a href="#" class="text-xl font-black text-white tracking-wider flex items-center justify-center md:justify-start gap-2">
+                <i class="fa-solid fa-egg text-amber-500"></i>
+                <span>TERPANA<span class="text-amber-500">.</span></span>
+            </a>
+            <p class="text-xs text-slate-500 mt-2">© 2026 TERPANA.</p>
+        </div>
+    </div>
+</footer>
+
+<script>
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuIcon = document.getElementById('menu-icon');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        // 1. Mobile Menu Navbar Toggle
+        if (menuBtn && mobileMenu && menuIcon) {
+            menuBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+                if(mobileMenu.classList.contains('hidden')) {
+                    menuIcon.className = 'fa-solid fa-bars text-xl';
+                } else {
+                    menuIcon.className = 'fa-solid fa-xmark text-xl';
+                }
+            });
+
+            // Tutup menu otomatis jika link diklik (di mobile)
+            mobileLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('hidden');
+                    menuIcon.className = 'fa-solid fa-bars text-xl';
+                });
+            });
+        }
+
+        // 2. Akordion FAQ Berantai (Hanya satu yang bisa terbuka secara bersamaan)
+        const detailsElements = document.querySelectorAll('details');
+        detailsElements.forEach((targetDetail) => {
+            targetDetail.addEventListener('click', () => {
+                detailsElements.forEach((detail) => {
+                    if (detail !== targetDetail) {
+                        detail.removeAttribute('open');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
